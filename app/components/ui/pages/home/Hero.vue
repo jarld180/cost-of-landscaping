@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="relative overflow-hidden rounded-3xl bg-[#edf2fc] py-16 dark:from-blue-950/20 dark:to-neutral-800 md:py-24 lg:py-32">
+  <section class="relative overflow-hidden rounded-3xl bg-[#f0f7f0] py-16 dark:from-blue-950/20 dark:to-neutral-800 md:py-24 lg:py-32">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <!-- Content Container -->
       <div class="flex flex-col items-center text-center">

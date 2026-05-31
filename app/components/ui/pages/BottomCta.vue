@@ -6,7 +6,7 @@
   <section class="py-16 md:py-20 lg:py-28">
     <div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
       <!-- CTA Container -->
-      <div class="flex flex-col items-center justify-center rounded-3xl px-8 py-16 text-center md:px-12 md:py-20 lg:px-16 lg:py-28" style="background-color: #0041d9;">
+      <div class="flex flex-col items-center justify-center rounded-3xl px-8 py-16 text-center md:px-12 md:py-20 lg:px-16 lg:py-28" style="background-color: #1f6f3a;">
         <!-- Eyebrow -->
         <Eyebrow
           text="For Contractors"
@@ -30,7 +30,7 @@
           text="Get Listed Now"
           variant="primary-outline"
           :colors="['#ffffff', '#c0c0c0']"
-          :textColors="['#0041d9', '#0041d9']"
+          :textColors="['#1f6f3a', '#1f6f3a']"
           location="/"
           size="lg"
         />

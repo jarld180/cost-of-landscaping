@@ -95,7 +95,7 @@ const variantClasses = computed(() => {
     'primary-outline': `${borderClasses.value} border-blue-400 bg-transparent text-blue-500 dark:border-blue-500 dark:text-blue-400`,
     'secondary-outline': `${borderClasses.value} border-neutral-500 bg-transparent text-neutral-700 dark:border-neutral-600 dark:text-neutral-300`,
     'ghost': `${borderClasses.value} border-black bg-transparent text-black dark:border-white dark:text-white`,
-    'blue-blue': 'border-0 bg-[#edf2fc] text-blue-500 dark:bg-blue-900/30 dark:text-blue-400'
+    'blue-blue': 'border-0 bg-[#f0f7f0] text-blue-500 dark:bg-blue-900/30 dark:text-blue-400'
   }
   return variants[props.variant]
 })

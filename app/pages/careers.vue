@@ -41,7 +41,7 @@ const perks = [
 <template>
   <div class="min-h-screen bg-neutral-50 dark:bg-neutral-900">
     <!-- Hero -->
-    <div class="bg-[#edf2fc] dark:bg-neutral-800">
+    <div class="bg-[#f0f7f0] dark:bg-neutral-800">
       <div class="container mx-auto px-4 py-12 md:py-16">
         <div class="mx-auto max-w-3xl text-center">
           <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">We're hiring</p>

@@ -594,7 +594,7 @@ const submitClaim = async () => {
         <Card padding="p-0" class="overflow-hidden" :background-colors="['#ffffff', '#171717']" border-width="thick" :border-color="['#e5e7eb', '#404040']">
           <!-- Tabs -->
           <div class="flex flex-wrap gap-2 px-8 pt-6">
-            <button v-for="tab in tabs" :key="tab" type="button" :class="['rounded-full px-6 py-2 text-sm font-bold transition-colors', activeTab === tab ? 'bg-[#edf2fc] text-[#0041d9] dark:bg-blue-900/30 dark:text-blue-400' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700']" @click="activeTab = tab">
+            <button v-for="tab in tabs" :key="tab" type="button" :class="['rounded-full px-6 py-2 text-sm font-bold transition-colors', activeTab === tab ? 'bg-[#f0f7f0] text-[#1f6f3a] dark:bg-blue-900/30 dark:text-blue-400' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700']" @click="activeTab = tab">
               {{ tab }}
             </button>
           </div>

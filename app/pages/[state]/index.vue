@@ -222,7 +222,7 @@ watch(() => filters.serviceType, (newValue) => {
     <!-- Hero Section with state context -->
     <div class="container mx-auto mb-12 px-4 py-8">
       <SearchHero
-        background-color="#edf2fc"
+        background-color="#f0f7f0"
         :state-name="stateData?.name"
         :state-abbreviation="stateData?.abbreviation"
         :service-options="serviceOptions"

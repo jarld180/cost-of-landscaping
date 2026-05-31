@@ -39,7 +39,7 @@ const sizeClasses = computed(() => {
 const variantClasses = computed(() => {
   const variants = {
     'white-blue': 'bg-neutral-50 text-blue-500 dark:bg-white dark:text-blue-500',
-    'blue-blue': 'bg-[#edf2fc] text-blue-500 dark:bg-blue-900/30 dark:text-blue-400',
+    'blue-blue': 'bg-[#f0f7f0] text-blue-500 dark:bg-blue-900/30 dark:text-blue-400',
     'white-white': 'bg-[#334570] text-white dark:bg-[#334570] dark:text-white'
   }
   return variants[props.variant]

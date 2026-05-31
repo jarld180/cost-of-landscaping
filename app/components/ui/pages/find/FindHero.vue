@@ -1,5 +1,5 @@
 <template>
-  <section class="rounded-2xl bg-[#edf2fc] dark:bg-neutral-800 px-6 py-12 md:px-12 md:py-16">
+  <section class="rounded-2xl bg-[#f0f7f0] dark:bg-neutral-800 px-6 py-12 md:px-12 md:py-16">
     <div class="mx-auto max-w-3xl text-center">
       <div class="mb-4 flex justify-center">
         <Eyebrow text="Find Local Contractors" />
