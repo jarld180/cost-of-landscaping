@@ -11,9 +11,9 @@ definePageMeta({ layout: 'default' })
     quick-answer="Most residential tree removals price by trunk diameter and crew time: small trees under 30 ft cost $250–$650, medium trees 30–60 ft cost $700–$1,800, large trees 60–80 ft cost $1,500–$3,000, and large hazardous trees over 80 ft cost $2,500–$6,500+. Stump grinding is usually $100–$400 separately. Trimming runs $250–$1,500 depending on canopy size and crew time."
     intro="Tree service pricing depends on three things: tree size, crew time, and risk — specifically how close the tree sits to houses, fences, pools, and power lines. The same 50-foot oak removed from a wide-open backyard might cost $700; remove the same tree over a roof and pool, and it can hit $3,500."
     :cost-rows="[
-      { label: 'Tree removal — small (<30 ft)', range: '$250 – $650', note: 'Trunk diameter under 12"' },
-      { label: 'Tree removal — medium (30–60 ft)', range: '$700 – $1,800', note: 'Trunk 12–24"' },
-      { label: 'Tree removal — large (60–80 ft)', range: '$1,500 – $3,000', note: 'Trunk 24–36"' },
+      { label: 'Tree removal — small (<30 ft)', range: '$250 – $650', note: 'Trunk diameter under 12 inches' },
+      { label: 'Tree removal — medium (30–60 ft)', range: '$700 – $1,800', note: 'Trunk 12 to 24 inches' },
+      { label: 'Tree removal — large (60–80 ft)', range: '$1,500 – $3,000', note: 'Trunk 24 to 36 inches' },
       { label: 'Tree removal — XL (80+ ft)', range: '$2,500 – $6,500+', note: 'Often requires crane rental' },
       { label: 'Trimming / pruning', range: '$250 – $1,500', note: 'Canopy size + crew time' },
       { label: 'Stump grinding', range: '$100 – $400', note: 'Usually billed per inch of diameter' },

@@ -11,7 +11,7 @@ definePageMeta({ layout: 'default' })
     quick-answer="Mulch refresh on residential beds runs $65–$110 per cubic yard installed (one yard covers ~100 sf at 3 inches deep). Sod installation costs $1.00–$2.20/sf installed including soil prep. Hydroseeding $0.10–$0.25/sf. Shrub installs $40–$120 each (1–5 gallon). Tree installs $200–$1,200 each (5 gallon to 30 gallon, including planting and warranty)."
     intro="Mulch + planting is the highest-frequency landscape spend most homeowners make — once or twice per year for mulch refresh, plus periodic plant additions or replacements. The numbers below are 2026 national medians for residential work."
     :cost-rows="[
-      { label: 'Mulch refresh — installed', range: '$65 – $110 / yard', note: '1 yard ≈ 100 sf at 3" depth' },
+      { label: 'Mulch refresh — installed', range: '$65 – $110 / yard', note: '1 yard ≈ 100 sf at 3-inch depth' },
       { label: 'Sod install', range: '$1.00 – $2.20 / sf', note: 'Includes soil prep + delivery + lay' },
       { label: 'Hydroseed', range: '$0.10 – $0.25 / sf', note: 'Cheaper but 2–4 wk to germinate' },
       { label: 'Shrub install (1–5 gal)', range: '$40 – $120 each', note: 'Plant + labor + amendment' },
@@ -25,7 +25,7 @@ definePageMeta({ layout: 'default' })
       'Bed prep — fresh refresh is cheap; weeding + edging adds 30–60% to labor.',
       'Plant size — gallons matter. 1-gallon shrubs cost $9–$18 material; 5-gallon $25–$45; 7-gallon $40–$80. Labor scales with hole size.',
       'Sod vs. seed — sod is fast but expensive; seed is cheap but takes 6–10 weeks to be foot-traffic ready.',
-      'Soil amendment — bagged compost on top is cheap; tilling in 3" of compost across the bed is expensive but lasts.'
+      'Soil amendment — bagged compost on top is cheap; tilling in 3 inches of compost across the bed is expensive but lasts.'
     ]"
     :hire-checklist="[
       'Get mulch type spelled out — undyed hardwood vs. pine bark vs. dyed; quality varies wildly.',

@@ -30,7 +30,7 @@ definePageMeta({ layout: 'default' })
       'Ask exactly what each program includes: how many fert steps, pre-emergent timing, grub control yes/no.',
       'Verify general liability AND workers comp — lawn equipment injuries are common.',
       'Read the cancel/skip policy: weekly contracts that auto-bill year-round are common traps.',
-      'Confirm equipment scale matches your lot — 21" walk mowers on a half-acre will burn 2x the time.'
+      'Confirm equipment scale matches your lot — 21-inch walk mowers on a half-acre will burn 2x the time.'
     ]"
     :related-articles="[
       { title: 'How Much Does Lawn Care Cost in 2026?', to: '/blog/how-much-does-lawn-care-cost-in-2026', excerpt: 'Full regional breakdown with per-acre and per-zip pricing.' },

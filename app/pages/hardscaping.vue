@@ -21,7 +21,7 @@ definePageMeta({ layout: 'default' })
       { label: 'Outdoor kitchen', range: '$8,000 – $35,000+', note: 'Grill + counter + cabinetry' }
     ]"
     :what-drives-cost="[
-      'Base prep — 4–8" of compacted crushed stone + edge restraint is the single biggest quality signal. Skip it and walks fail in 2–5 years.',
+      'Base prep — 4 to 8 inches of compacted crushed stone + edge restraint is the single biggest quality signal. Skip it and walks fail in 2–5 years.',
       'Material — concrete pavers are cheapest, natural stone is 2–3x. Color, shape, and thickness within each material also swing pricing 30–50%.',
       'Pattern — herringbone and curved layouts have 15–25% higher labor than running bond / rectangular.',
       'Site access — wheelbarrow-only delivery (no Bobcat access) adds 20–40% labor.',
@@ -40,9 +40,9 @@ definePageMeta({ layout: 'default' })
       { title: 'Sprinkler System Cost in 2026', to: '/blog/sprinkler-system-cost-2026', excerpt: 'Plan irrigation before the hardscape goes in — not after.' }
     ]"
     :faqs="[
-      { question: 'How long does a paver patio last?', answer: 'A properly installed paver patio (4–8" compacted base + edge restraint + polymeric sand) lasts 25+ years with minimal maintenance. A patio installed on dirt or thin base typically fails (settling, weed intrusion, edge spread) in 3–7 years.' },
+      { question: 'How long does a paver patio last?', answer: 'A properly installed paver patio (4 to 8 inches of compacted base + edge restraint + polymeric sand) lasts 25+ years with minimal maintenance. A patio installed on dirt or thin base typically fails (settling, weed intrusion, edge spread) in 3–7 years.' },
       { question: 'Pavers vs. stamped concrete — which is better?', answer: 'Pavers cost more upfront ($15–$30/sf vs $14–$26/sf) but are repairable: lift and replace individual pavers if one cracks or stains. Stamped concrete is one monolithic slab — when it cracks (and most do within 5–10 years), the repair always shows. For most homeowners, pavers win on lifetime cost.' },
-      { question: 'Do I need a building permit for a patio?', answer: 'Patios at-grade typically do not require a permit. Decks above 30" off the ground almost always do. Retaining walls over 4 feet usually require engineering and a permit. Fire pits and outdoor kitchens with gas lines require permits. Confirm with your municipality before signing.' },
+      { question: 'Do I need a building permit for a patio?', answer: 'Patios at-grade typically do not require a permit. Decks above 30 inches off the ground almost always do. Retaining walls over 4 feet usually require engineering and a permit. Fire pits and outdoor kitchens with gas lines require permits. Confirm with your municipality before signing.' },
       { question: 'How do I keep weeds out of paver joints?', answer: 'Use polymeric sand for joint fill (not regular sand) and re-apply every 4–6 years. Keep joints fully packed. Stop spot-applying glyphosate; it kills surface weeds but seeds will keep arriving — solve the joint integrity instead.' },
       { question: 'What is the cheapest hardscape that still looks good?', answer: 'Pea gravel or decomposed granite with a steel edge — $4–$9/sf installed. Used in modern landscape design more often than you would think. Drains beautifully, low maintenance, replaceable.' }
     ]"
