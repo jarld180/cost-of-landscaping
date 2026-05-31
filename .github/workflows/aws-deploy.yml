@@ -1,0 +1,93 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Cost of Concrete -> Deploy to AWS (Production)
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: "--max-old-space-size=6144"
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10.21.0
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'
+        cache: 'pnpm'
+
+    - name: Generate .env from secrets
+      run: |
+        cat << EOF > .env
+        NUXT_ANTHROPIC_API_KEY=${{ secrets.NUXT_ANTHROPIC_API_KEY }}
+        NUXT_BULK_OPERATION_LIMIT=${{ secrets.NUXT_BULK_OPERATION_LIMIT }}
+        NUXT_DATAFORSEO_API_KEY=${{ secrets.NUXT_DATAFORSEO_API_KEY }}
+        NUXT_EXA_API_KEY=${{ secrets.NUXT_EXA_API_KEY }}
+        NUXT_GOOGLE_GEOCODING_API_KEY=${{ secrets.NUXT_GOOGLE_GEOCODING_API_KEY }}
+        NUXT_HELICONE_API_KEY=${{ secrets.NUXT_HELICONE_API_KEY }}
+        NUXT_IMAGE_ALLOWLIST=${{ secrets.NUXT_IMAGE_ALLOWLIST }}
+        NUXT_JOB_RUNNER_SECRET=${{ secrets.NUXT_JOB_RUNNER_SECRET }}
+        NUXT_OPENAI_API_KEY=${{ secrets.NUXT_OPENAI_API_KEY }}
+        NUXT_PUBLIC_SITE_NAME=${{ secrets.NUXT_PUBLIC_SITE_NAME }}
+        NUXT_PUBLIC_SITE_URL=${{ secrets.NUXT_PUBLIC_SITE_URL }}
+        NUXT_PUBLIC_SUPABASE_KEY=${{ secrets.NUXT_PUBLIC_SUPABASE_KEY }}
+        NUXT_PUBLIC_SUPABASE_URL=${{ secrets.NUXT_PUBLIC_SUPABASE_URL }}
+        NUXT_RESEND_API_KEY=${{ secrets.NUXT_RESEND_API_KEY }}
+        NUXT_SUPABASE_PROJECT_ID=${{ secrets.NUXT_SUPABASE_PROJECT_ID }}
+        NUXT_SUPABASE_SECRET_KEY=${{ secrets.NUXT_SUPABASE_SECRET_KEY }}
+        NUXT_TWILIO_ACCOUNT_SID=${{ secrets.NUXT_TWILIO_ACCOUNT_SID }}
+        NUXT_TWILIO_AUTH_TOKEN=${{ secrets.NUXT_TWILIO_AUTH_TOKEN }}
+        NUXT_TWILIO_VERIFY_SERVICE_SID=${{ secrets.NUXT_TWILIO_VERIFY_SERVICE_SID }}
+        EOF
+
+    - name: Configure pnpm for CI
+      run: pnpm config set onlyBuiltDependencies '@parcel/watcher,@sentry/cli,better-sqlite3,core-js,esbuild,sharp,vue-demi'
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Install Supabase CLI
+      uses: supabase/setup-cli@v1
+      with:
+        version: latest
+
+    - name: Run database migrations
+      continue-on-error: true
+      env:
+        SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      run: supabase db push --project-ref ${{ secrets.NUXT_SUPABASE_PROJECT_ID }}
+
+    - name: Build the project
+      run: pnpm run build
+
+    - name: Deploy to EC2
+      env:
+        AWS_EC2_HOST: ${{ secrets.AWS_COC_HOST }}
+        AWS_EC2_USER: ${{ secrets.AWS_COC_USER }}
+        AWS_PRIVATE_KEY: ${{ secrets.AWS_COC_PRIVATE_KEY }}
+      run: |
+        echo "${AWS_PRIVATE_KEY}" > private_key.pem
+        chmod 600 private_key.pem
+        cd .output
+        zip -r ../output.zip .
+        cd ..
+        scp -o StrictHostKeyChecking=no -i private_key.pem output.zip .env ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/ubuntu/app
+        scp -o StrictHostKeyChecking=no -i private_key.pem ecosystem.config.cjs ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/ubuntu/app
+        ssh -o StrictHostKeyChecking=no -i private_key.pem ${AWS_EC2_USER}@${AWS_EC2_HOST} '
+        cd /home/ubuntu/app &&
+        unzip -o output.zip &&
+        rm output.zip &&
+        pm2 restart costofconcrete --update-env
+        '
+        rm private_key.pem

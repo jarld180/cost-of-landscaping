@@ -1,0 +1,236 @@
+/**
+ * Admin Theme CSS - shadcn compatible CSS custom properties
+ * Converted from oklch to hsl for Tailwind v3 compatibility
+ * Import this file only in the admin layout
+ */
+
+:root {
+  /* Base radius */
+  --radius: 0.625rem;
+  --header-height: 54px;
+
+  /* Light mode colors (converted from oklch to hsl) */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+  --primary: 224 100% 43%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 224 100% 43%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 224 100% 43%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --warning: 48 96% 53%;
+  --warning-foreground: 21 92% 14%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 224 100% 43%;
+
+  /* Chart colors */
+  --chart-1: 217 91% 60%;
+  --chart-2: 221 83% 53%;
+  --chart-3: 224 76% 48%;
+  --chart-4: 226 71% 40%;
+  --chart-5: 224 64% 33%;
+
+  /* Sidebar colors */
+  --sidebar: 0 0% 98%;
+  --sidebar-foreground: 0 0% 9%;
+  --sidebar-primary: 224 100% 43%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 0 0% 96%;
+  --sidebar-accent-foreground: 224 100% 43%;
+  --sidebar-border: 0 0% 90%;
+  --sidebar-ring: 224 100% 43%;
+
+  /* Surface */
+  --surface: 0 0% 97%;
+  --surface-foreground: 0 0% 9%;
+}
+
+.dark {
+  /* Dark mode colors */
+  --background: 0 0% 9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 13%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 17%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 224 100% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 17%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 17%;
+  --muted-foreground: 0 0% 64%;
+  --accent: 0 0% 24%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --warning: 48 96% 53%;
+  --warning-foreground: 21 92% 14%;
+  --border: 0 0% 100% / 10%;
+  --input: 0 0% 100% / 15%;
+  --ring: 224 100% 60%;
+
+  /* Chart colors (dark mode) */
+  --chart-1: 217 91% 75%;
+  --chart-2: 221 83% 65%;
+  --chart-3: 224 76% 58%;
+  --chart-4: 226 71% 50%;
+  --chart-5: 224 64% 43%;
+
+  /* Sidebar colors (dark mode) */
+  --sidebar: 0 0% 13%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 224 100% 60%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 0 0% 17%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-border: 0 0% 100% / 10%;
+  --sidebar-ring: 224 100% 60%;
+
+  /* Surface (dark mode) */
+  --surface: 0 0% 12%;
+  --surface-foreground: 0 0% 64%;
+}
+
+/* Radius utilities */
+.radius-sm {
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.radius-md {
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.radius-lg {
+  border-radius: var(--radius);
+}
+
+.radius-xl {
+  border-radius: calc(var(--radius) + 4px);
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--reka-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--reka-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* No scrollbar utility */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* =====================================================
+   Agent Flow Graph Styles
+   ===================================================== */
+
+/* Container scoping */
+.agent-flow-graph .vue-flow {
+  background-color: hsl(var(--background));
+  transition: background-color 300ms ease-in-out;
+}
+
+.agent-flow-graph .vue-flow__edge-path {
+  stroke: hsl(var(--muted-foreground));
+  transition: stroke 300ms ease-in-out;
+}
+
+.agent-flow-graph .vue-flow__edge-path.edge-animated,
+.agent-flow-graph .edge-animated .vue-flow__edge-path {
+  stroke-dasharray: 5;
+  animation: edge-flow 0.5s linear infinite;
+}
+
+.agent-flow-graph .vue-flow__handle {
+  width: 10px;
+  height: 10px;
+  border: 2px solid hsl(var(--background));
+  transition: all 200ms ease-in-out;
+}
+
+/* Agent-specific active glows */
+.agent-flow-graph .agent-node-active[data-agent="research"] {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+.agent-flow-graph .agent-node-active[data-agent="outline"] {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+.agent-flow-graph .agent-node-active[data-agent="writer"] {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+.agent-flow-graph .agent-node-active[data-agent="seo"] {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+.agent-flow-graph .agent-node-active[data-agent="qa"] {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+.agent-flow-graph .agent-node-active[data-agent="project_manager"] {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+.agent-flow-graph .agent-node-active[data-agent="image_generator"] {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+  animation: agent-pulse 2s infinite;
+}
+
+/* Keyframes */
+@keyframes edge-flow {
+  to { stroke-dashoffset: -10; }
+}
+
+@keyframes agent-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .agent-flow-graph .agent-node-active {
+    animation: none;
+  }
+  .agent-flow-graph .edge-animated,
+  .agent-flow-graph .edge-animated .vue-flow__edge-path {
+    animation: none;
+  }
+  .agent-flow-graph * {
+    transition-duration: 0.01ms !important;
+  }
+}
+

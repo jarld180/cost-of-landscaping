@@ -1,0 +1,25 @@
+name: Strip AI listicle content from all NC cities
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        required: true
+        default: 'no'
+        type: string
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - env:
+          AWS_EC2_HOST: ${{ secrets.AWS_COC_HOST }}
+          AWS_EC2_USER: ${{ secrets.AWS_COC_USER }}
+          AWS_PRIVATE_KEY: ${{ secrets.AWS_COC_PRIVATE_KEY }}
+          COMMIT_FLAG: ${{ github.event.inputs.commit }}
+        run: |
+          echo "${AWS_PRIVATE_KEY}" > k.pem && chmod 600 k.pem
+          scp -o StrictHostKeyChecking=no -i k.pem seeds/strip-listicle-content.mjs ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/${AWS_EC2_USER}/s.mjs
+          ssh -o StrictHostKeyChecking=no -i k.pem ${AWS_EC2_USER}@${AWS_EC2_HOST} "COMMIT=${COMMIT_FLAG} node /home/${AWS_EC2_USER}/s.mjs && rm -f /home/${AWS_EC2_USER}/s.mjs"
+          rm k.pem

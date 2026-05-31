@@ -1,0 +1,65 @@
+name: Auto-blog (daily article publish)
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_topic:
+        description: 'Force a specific topic (overrides topic queue). Leave blank to pick next from topics.json.'
+        required: false
+        default: ''
+        type: string
+      dry_run:
+        description: 'Type "yes" for dry-run (no DB write). Otherwise the article publishes live.'
+        required: false
+        default: 'no'
+        type: string
+      content_file:
+        description: 'Path to a pre-generated article JSON (repo-relative). Skips the Anthropic API call.'
+        required: false
+        default: ''
+        type: string
+  schedule:
+    # 12:00 UTC daily = 7am ET (standard) / 8am ET (daylight)
+    - cron: '0 12 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Generate and publish blog article
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Run blog engine
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.NUXT_ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.NUXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.NUXT_SUPABASE_SECRET_KEY }}
+          FORCE_TOPIC: ${{ github.event.inputs.force_topic }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'yes' && '1' || '' }}
+          CONTENT_FILE: ${{ github.event.inputs.content_file }}
+        run: node scripts/blog-engine/auto-blog-deploy.mjs
+
+      - name: Commit topic-queue progress
+        if: github.event.inputs.dry_run != 'yes'
+        run: |
+          if git diff --quiet scripts/blog-engine/used-topics.json; then
+            echo "No used-topics changes to commit."
+            exit 0
+          fi
+          git config user.name "coc-auto-blog[bot]"
+          git config user.email "auto-blog@costofconcrete.com"
+          git add scripts/blog-engine/used-topics.json
+          git commit -m "auto-blog: advance topic queue [skip ci]"
+          git push origin main

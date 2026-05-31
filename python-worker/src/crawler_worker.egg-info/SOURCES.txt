@@ -1,0 +1,7 @@
+pyproject.toml
+src/__init__.py
+src/crawler_worker.egg-info/PKG-INFO
+src/crawler_worker.egg-info/SOURCES.txt
+src/crawler_worker.egg-info/dependency_links.txt
+src/crawler_worker.egg-info/requires.txt
+src/crawler_worker.egg-info/top_level.txt

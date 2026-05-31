@@ -1,0 +1,19 @@
+name: Count contractors by filter
+
+on:
+  workflow_dispatch:
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - env:
+          AWS_EC2_HOST: ${{ secrets.AWS_COC_HOST }}
+          AWS_EC2_USER: ${{ secrets.AWS_COC_USER }}
+          AWS_PRIVATE_KEY: ${{ secrets.AWS_COC_PRIVATE_KEY }}
+        run: |
+          echo "${AWS_PRIVATE_KEY}" > k.pem && chmod 600 k.pem
+          scp -o StrictHostKeyChecking=no -i k.pem seeds/count-contractors.mjs ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/${AWS_EC2_USER}/c.mjs
+          ssh -o StrictHostKeyChecking=no -i k.pem ${AWS_EC2_USER}@${AWS_EC2_HOST} "node /home/${AWS_EC2_USER}/c.mjs && rm -f /home/${AWS_EC2_USER}/c.mjs"
+          rm k.pem

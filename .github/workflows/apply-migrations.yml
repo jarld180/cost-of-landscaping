@@ -1,0 +1,50 @@
+name: Apply Migrations (one-shot)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    name: Apply Supabase Migrations via EC2
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build migration bundle
+      run: |
+        cat supabase/migrations/20260420000001_verification_tier_system.sql \
+            supabase/migrations/20260420000002_add_population_to_cities.sql \
+            supabase/migrations/20260420000003_city_listicle_content.sql \
+            supabase/migrations/20260420000004_article_keywords.sql \
+            supabase/migrations/20260420000005_seed_article_keywords.sql \
+            supabase/migrations/20260420000006_lead_capture.sql \
+            supabase/migrations/20260420000007_admin_notifications.sql \
+            supabase/migrations/20260421000001_grant_service_role_listicle.sql \
+            supabase/migrations/20260422000001_fix_radius_city_slug.sql \
+            supabase/migrations/20260422000002_platform_reviews.sql \
+            supabase/migrations/20260422000003_blog_parent_page.sql \
+            supabase/migrations/20260422000004_grant_service_role_article_keywords.sql \
+            supabase/migrations/20260423000001_grant_service_role_all_tables.sql \
+            > /tmp/all-migrations.sql
+
+    - name: Deploy and run on EC2
+      env:
+        AWS_EC2_HOST: ${{ secrets.AWS_COC_HOST }}
+        AWS_EC2_USER: ${{ secrets.AWS_COC_USER }}
+        AWS_PRIVATE_KEY: ${{ secrets.AWS_COC_PRIVATE_KEY }}
+      run: |
+        echo "${AWS_PRIVATE_KEY}" > private_key.pem
+        chmod 600 private_key.pem
+
+        scp -o StrictHostKeyChecking=no -i private_key.pem \
+          /tmp/all-migrations.sql \
+          scripts/run-migrations-ec2.sh \
+          ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/ubuntu/
+
+        ssh -o StrictHostKeyChecking=no -i private_key.pem \
+          ${AWS_EC2_USER}@${AWS_EC2_HOST} \
+          'chmod +x /home/ubuntu/run-migrations-ec2.sh && /home/ubuntu/run-migrations-ec2.sh'
+
+        rm private_key.pem

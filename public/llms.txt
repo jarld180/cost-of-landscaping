@@ -1,0 +1,29 @@
+# Cost of Concrete
+
+> Directory of vetted concrete contractors across the U.S. — driveways, patios, foundations, stamped concrete, sidewalks, repairs. We track license status, insurance (Certificate of Insurance on file), BBB record, and customer reviews for every listed contractor. ~22,000 contractor profiles, organized by state and city.
+
+## Browse by location
+
+- [Find by state](https://costofconcrete.com/find): all 50 U.S. states
+- State pages: `https://costofconcrete.com/{state-slug}` (e.g. `/north-carolina`)
+- City listicle (top picks): `https://costofconcrete.com/{state-slug}/{city-slug}/best-concrete-contractors`
+- City directory (all contractors): `https://costofconcrete.com/{state-slug}/{city-slug}/concrete-contractors`
+- Contractor profile: `https://costofconcrete.com/{state-slug}/{city-slug}/concrete-contractors/{contractor-slug}`
+
+## Verification tiers
+
+- **Cost of Concrete Certified Partner** — full vetting + Certificate of Insurance on file naming Cost of Concrete as Additional Insured
+- **Fully Verified** — license + insurance confirmed
+- **Verified** — license confirmed
+- **Listed** — public-record contractor, not yet verified
+
+## Resources
+
+- [Patio cost guide](https://costofconcrete.com/how-much-does-a-concrete-patio-cost)
+- [Rebar guide](https://costofconcrete.com/do-i-need-rebar-in-my-concrete)
+- [Concrete repair guide](https://costofconcrete.com/can-cracks-in-concrete-be-repaired)
+- [Concrete maintenance guide](https://costofconcrete.com/what-maintenance-does-residential-concrete-require)
+
+## Sitemap
+
+- [XML sitemap](https://costofconcrete.com/sitemap.xml)

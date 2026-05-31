@@ -1,0 +1,132 @@
+-- Seed: 200+ concrete keyword targets for AI article generation.
+-- Organized by category. Admin can batch-queue all at once from /admin/ai/article-keywords.
+
+INSERT INTO article_keywords (keyword, category, priority, secondary_keywords, article_context) VALUES
+
+-- COST GUIDES (highest search intent, most conversions)
+('cost of concrete per square foot', 'cost_guide', 95, ARRAY['concrete price per sq ft','how much concrete costs','concrete pricing','ready mix concrete cost'], 'Homeowners planning concrete projects. Focus on regional price variation, 2024-2026 material costs, labor markup.'),
+('how much does a concrete driveway cost', 'cost_guide', 95, ARRAY['driveway replacement cost','concrete vs asphalt cost','new driveway price','driveway installation cost'], 'Homeowners replacing aging driveways. Include size-based cost tables, regional variation, what drives price up.'),
+('concrete patio cost', 'cost_guide', 90, ARRAY['patio installation cost','backyard patio price','concrete vs paver patio cost','patio cost calculator'], 'Homeowners adding outdoor living space. Cover basic vs stamped vs aggregate options.'),
+('stamped concrete cost', 'cost_guide', 88, ARRAY['decorative concrete cost','stamped concrete price per square foot','stamped vs plain concrete cost','stamped concrete patterns cost'], 'Homeowners wanting premium aesthetics. Explain the premium over plain concrete and maintenance implications.'),
+('concrete foundation cost', 'cost_guide', 85, ARRAY['foundation pour cost','slab foundation cost','basement foundation cost','crawl space vs slab cost'], 'Builders and homeowners. Slab vs crawl vs basement options.'),
+('concrete slab cost', 'cost_guide', 85, ARRAY['concrete slab price','how much to pour a slab','slab cost calculator','concrete pad cost'], 'Broad audience — sheds, garages, additions. Focus on thickness and reinforcement impact.'),
+('concrete pool deck cost', 'cost_guide', 80, ARRAY['pool deck resurfacing cost','pool surround cost','concrete vs pavers pool deck','cool deck cost'], 'Pool owners. Compare concrete vs other materials.'),
+('concrete retaining wall cost', 'cost_guide', 78, ARRAY['retaining wall price','how much does a retaining wall cost','concrete block wall cost','poured concrete wall cost'], 'Homeowners with sloped yards.'),
+('concrete sidewalk cost', 'cost_guide', 75, ARRAY['sidewalk replacement cost','concrete walkway cost','path installation price','sidewalk per linear foot cost'], 'HOAs and homeowners. Linear foot pricing, permits.'),
+('exposed aggregate concrete cost', 'cost_guide', 72, ARRAY['aggregate driveway cost','exposed concrete pricing','decorative aggregate concrete','pebbled concrete cost'], 'Premium driveway/patio buyers.'),
+('concrete resurfacing cost', 'cost_guide', 70, ARRAY['driveway resurfacing cost','concrete overlay price','resurfacing vs replacement cost','concrete skim coat cost'], 'Owners of cracked/worn concrete looking to avoid replacement.'),
+('concrete staining cost', 'cost_guide', 68, ARRAY['acid stain concrete cost','concrete floor staining price','decorative stain cost','reactive vs non-reactive stain cost'], 'Interior renovation.'),
+('concrete sealing cost', 'cost_guide', 68, ARRAY['how much to seal concrete','driveway sealing cost','concrete sealer price','professional vs DIY sealing cost'], 'Maintenance-focused homeowners.'),
+('polished concrete floor cost', 'cost_guide', 65, ARRAY['concrete floor polishing price','polished concrete vs tile cost','polished concrete maintenance cost','commercial concrete floor cost'], 'Residential and commercial flooring.'),
+('concrete steps cost', 'cost_guide', 65, ARRAY['outdoor concrete steps cost','front steps replacement cost','concrete stoop cost','precast concrete steps price'], 'Homeowners replacing deteriorating entry steps.'),
+('concrete garage floor cost', 'cost_guide', 65, ARRAY['garage floor coating cost','epoxy vs concrete floor cost','garage floor resurfacing cost','garage floor pour cost'], 'Homeowners upgrading garage.'),
+('concrete countertop cost', 'cost_guide', 62, ARRAY['DIY concrete countertop cost','custom concrete counter price','concrete vs granite cost','concrete countertop sealers'], 'Kitchen/bath renovation.'),
+('fiber cement vs concrete cost', 'cost_guide', 58, ARRAY['fiber reinforced concrete cost','concrete material cost comparison','FRC pricing'], 'Builders comparing materials.'),
+('pervious concrete cost', 'cost_guide', 55, ARRAY['permeable concrete price','porous concrete driveway cost','stormwater concrete cost'], 'Eco-conscious homeowners.'),
+('concrete delivery cost', 'cost_guide', 75, ARRAY['ready mix concrete delivery price','how much does a yard of concrete cost','concrete truck cost','bulk concrete pricing'], 'DIYers and small contractors. Cubic yard pricing, minimum loads.'),
+
+-- HOW-TO GUIDES
+('how to pour concrete', 'how_to', 85, ARRAY['concrete pouring guide','DIY concrete pour','how to mix and pour concrete','concrete pour steps'], 'DIYers. Safety, tools needed, common mistakes.'),
+('how to mix concrete by hand', 'how_to', 78, ARRAY['hand mixing concrete','concrete mixing ratio','portland cement mixing guide','water cement ratio'], 'DIYers doing small projects.'),
+('how to seal a concrete driveway', 'how_to', 82, ARRAY['driveway sealing guide','when to seal concrete','best concrete sealer application','concrete sealing steps'], 'Maintenance DIYers.'),
+('how to repair concrete cracks', 'how_to', 88, ARRAY['concrete crack filler','hairline crack repair','structural crack repair concrete','DIY crack repair'], 'Homeowners with cracked slabs or driveways.'),
+('how to stamp concrete', 'how_to', 72, ARRAY['stamped concrete techniques','concrete stamping tools','how to do decorative concrete','stamping timing'], 'DIY stamped patio audience.'),
+('how to stain concrete floors', 'how_to', 75, ARRAY['acid staining concrete','water based concrete stain','DIY floor staining','concrete stain prep'], 'Interior renovation DIYers.'),
+('how to level a concrete floor', 'how_to', 70, ARRAY['self leveling concrete guide','uneven concrete floor fix','floor leveling compound','concrete grinding vs leveling'], 'Flooring installers.'),
+('how to remove concrete stains', 'how_to', 68, ARRAY['oil stain concrete removal','rust stain concrete','pressure washing concrete stains','concrete cleaning guide'], 'Maintenance-focused.'),
+('how to paint concrete floors', 'how_to', 65, ARRAY['concrete floor paint guide','basement floor paint','concrete porch paint','floor paint vs epoxy'], 'Budget-conscious DIYers.'),
+('how to waterproof concrete', 'how_to', 70, ARRAY['waterproofing concrete walls','basement waterproofing concrete','concrete sealant vs waterproofing','crystalline waterproofing'], 'Homeowners with moisture issues.'),
+('how thick should a concrete driveway be', 'how_to', 80, ARRAY['concrete driveway thickness guide','4 inch vs 6 inch driveway','reinforced concrete thickness','driveway rebar depth'], 'Homeowners planning new driveways.'),
+('how to cure concrete properly', 'how_to', 75, ARRAY['concrete curing time','wet curing concrete','curing compound concrete','cold weather concrete curing'], 'DIYers and homeowners monitoring new pours.'),
+('how to acid wash concrete', 'how_to', 60, ARRAY['etching concrete guide','muriatic acid concrete cleaning','concrete prep for coating','acid etching safety'], 'Floor prep before coating.'),
+('how to cut concrete', 'how_to', 65, ARRAY['concrete saw cutting guide','how to cut concrete pavers','diamond blade concrete cutting','concrete expansion joints cutting'], 'DIYers and contractors.'),
+('how to break up concrete', 'how_to', 62, ARRAY['concrete demolition guide','jackhammer vs sledgehammer concrete','concrete removal DIY','concrete recycling'], 'Homeowners replacing old slabs.'),
+('how to grind concrete floors', 'how_to', 60, ARRAY['concrete grinder rental','floor prep grinding','concrete leveling grinder','diamond grinder concrete'], 'Floor renovation.'),
+('how to install concrete edging', 'how_to', 58, ARRAY['landscape concrete edging','concrete garden border','poured concrete edging guide','concrete curbing'], 'Landscaping audience.'),
+('how to patch concrete', 'how_to', 72, ARRAY['concrete patching compound','fix spalled concrete','concrete patch mix','large concrete repair'], 'Homeowners fixing damage.'),
+
+-- COMPARISONS
+('concrete vs asphalt driveway', 'comparison', 90, ARRAY['asphalt vs concrete cost','which is better concrete or asphalt','driveway material comparison','asphalt driveway pros cons'], 'Homeowners deciding on driveway material. Balanced comparison.'),
+('concrete vs pavers driveway', 'comparison', 85, ARRAY['concrete vs brick driveway','paver vs concrete cost','interlocking pavers vs concrete','driveway surface comparison'], 'Premium driveway buyers comparing options.'),
+('stamped concrete vs pavers', 'comparison', 82, ARRAY['decorative concrete vs pavers','which looks better stamped concrete or pavers','stamped concrete vs natural stone','patio material comparison'], 'Patio decision-makers.'),
+('concrete vs gravel driveway', 'comparison', 75, ARRAY['gravel vs concrete cost','crushed stone vs concrete','cheap driveway options','driveway surface pros cons'], 'Budget-conscious homeowners.'),
+('poured concrete vs concrete block', 'comparison', 70, ARRAY['block vs poured foundation','poured vs block basement wall','foundation type comparison','concrete block vs poured wall strength'], 'New construction buyers.'),
+('polished concrete vs epoxy floor', 'comparison', 68, ARRAY['epoxy vs polished concrete cost','garage floor options comparison','polished concrete vs tiles','floor finish comparison'], 'Garage and commercial floor buyers.'),
+('concrete vs wood deck', 'comparison', 72, ARRAY['deck vs patio cost','concrete patio vs wood deck','composite deck vs concrete','outdoor flooring comparison'], 'Outdoor living decision-makers.'),
+('concrete patio vs pavers', 'comparison', 78, ARRAY['patio material pros cons','concrete patio vs flagstone','which is better concrete or pavers patio','backyard patio comparison'], 'Patio installation buyers.'),
+('self-leveling concrete vs regular concrete', 'comparison', 60, ARRAY['SLC vs standard concrete','when to use self leveling concrete','floor leveling options','concrete products comparison'], 'Flooring contractors.'),
+('fiber vs rebar concrete reinforcement', 'comparison', 65, ARRAY['rebar vs fiber reinforcement','polypropylene fiber concrete','steel vs synthetic fiber concrete','best concrete reinforcement'], 'Contractors and informed DIYers.'),
+
+-- CONCRETE TYPES & PRODUCTS
+('what is ready mix concrete', 'type', 75, ARRAY['ready mixed concrete vs bagged','ready mix delivery','concrete mix design','ready mix concrete near me'], 'Buyers unfamiliar with commercial concrete.'),
+('high strength concrete explained', 'type', 65, ARRAY['high performance concrete','HPC concrete','concrete psi guide','structural concrete mix'], 'Engineers and informed contractors.'),
+('lightweight concrete uses', 'type', 60, ARRAY['lightweight concrete mix','low density concrete applications','foamed concrete','aerated concrete'], 'Specialty applications.'),
+('pervious concrete benefits', 'type', 62, ARRAY['permeable concrete uses','stormwater management concrete','porous concrete benefits','drainage concrete'], 'Eco-conscious and compliance-driven buyers.'),
+('shotcrete vs cast in place concrete', 'type', 60, ARRAY['gunite vs shotcrete','sprayed concrete applications','pool construction concrete','slope stabilization concrete'], 'Pool and structural audience.'),
+('colored concrete guide', 'type', 70, ARRAY['integral color concrete','concrete colorant options','how to color concrete','concrete pigment cost'], 'Decorative concrete buyers.'),
+('concrete mix ratios explained', 'type', 68, ARRAY['1:2:3 concrete mix','concrete mix design guide','water cement ratio','mix by hand ratios'], 'DIYers and informed homeowners.'),
+('air entrained concrete', 'type', 55, ARRAY['freeze thaw concrete','air entrainment admixture','cold climate concrete mix','winter concrete mix'], 'Contractors in cold climates.'),
+('self compacting concrete', 'type', 55, ARRAY['SCC concrete guide','vibration free concrete','tight spaces concrete pour','self consolidating concrete'], 'Specialty contractors.'),
+('rapid hardening concrete', 'type', 60, ARRAY['fast setting concrete','hydraulic cement','quick set concrete brands','3 hour concrete'], 'Emergency repairs and time-constrained projects.'),
+
+-- CONCRETE PROBLEMS & REPAIRS
+('why does concrete crack', 'problem', 85, ARRAY['concrete cracking causes','prevent concrete cracks','shrinkage cracks','control joints concrete'], 'Homeowners alarmed by new cracks.'),
+('concrete spalling repair', 'problem', 80, ARRAY['spalled concrete fix','surface flaking concrete repair','freeze thaw spalling','concrete resurfacing spalling'], 'Homeowners with deteriorating surfaces.'),
+('concrete heaving repair', 'problem', 72, ARRAY['frost heave concrete','lifted concrete slab repair','concrete settlement repair','tree root concrete damage'], 'Homeowners with uneven slabs.'),
+('efflorescence on concrete how to remove', 'problem', 70, ARRAY['white stain concrete','mineral deposit concrete removal','concrete efflorescence treatment','salt deposits concrete'], 'Homeowners with stained concrete.'),
+('concrete delamination repair', 'problem', 65, ARRAY['concrete delamination causes','surface layer peeling concrete','concrete delamination fix','concrete scalding'], 'Homeowners with surface failures.'),
+('concrete alkali silica reaction', 'problem', 55, ARRAY['ASR concrete','concrete internal cracking','concrete cancer treatment','silica gel concrete'], 'Informed homeowners and engineers.'),
+('concrete freeze thaw damage', 'problem', 72, ARRAY['concrete winter damage','freeze thaw cycle concrete','concrete scaling','winter proof concrete'], 'Cold climate homeowners.'),
+('how to prevent concrete corrosion', 'problem', 65, ARRAY['concrete rebar corrosion','reinforced concrete corrosion prevention','concrete coating protection','cathodic protection concrete'], 'Structural owners.'),
+('concrete sinking repair options', 'problem', 78, ARRAY['mudjacking cost','polyurethane foam lifting cost','sunken concrete driveway repair','concrete leveling methods'], 'Homeowners with sunken slabs.'),
+('concrete pitting causes and repair', 'problem', 62, ARRAY['concrete pitting fix','popouts concrete surface','concrete surface defects','pock marks concrete repair'], 'Maintenance audience.'),
+
+-- MAINTENANCE & CARE
+('concrete driveway maintenance guide', 'maintenance', 82, ARRAY['how to maintain concrete driveway','concrete care schedule','driveway upkeep tips','concrete longevity tips'], 'New concrete owners.'),
+('best concrete sealer for driveways', 'maintenance', 85, ARRAY['concrete sealer review','penetrating vs film sealer','acrylic vs polyurethane sealer','top rated driveway sealer'], 'DIY maintenance audience.'),
+('how often to seal concrete', 'maintenance', 78, ARRAY['concrete sealing schedule','when to reseal driveway','concrete sealer lifespan','resealing frequency'], 'Maintenance-focused homeowners.'),
+('safe deicing for concrete', 'maintenance', 75, ARRAY['concrete safe ice melt','calcium chloride vs sodium chloride concrete','pet safe concrete deicer','winter concrete care'], 'Cold climate homeowners.'),
+('pressure washing concrete guide', 'maintenance', 70, ARRAY['how to power wash concrete','concrete cleaning tips','PSI for concrete cleaning','pressure washer concrete safe'], 'Spring cleaning audience.'),
+('concrete joint maintenance', 'maintenance', 65, ARRAY['expansion joint caulk replacement','control joint maintenance','concrete joint sealing','crack prevention maintenance'], 'Long-term maintenance audience.'),
+('concrete stain removal guide', 'maintenance', 72, ARRAY['oil stain removal concrete','tire marks concrete removal','rust stains concrete','concrete cleaning products'], 'Homeowners with stained surfaces.'),
+('concrete resurfacing vs replacement', 'maintenance', 82, ARRAY['when to resurface vs replace concrete','concrete repair decision guide','is resurfacing worth it','concrete lifespan guide'], 'Decision-making audience — high conversion intent.'),
+('concrete polishing maintenance', 'maintenance', 60, ARRAY['polished floor care','concrete floor cleaning routine','concrete sealer reapplication','commercial floor maintenance'], 'Polished floor owners.'),
+('concrete basement floor maintenance', 'maintenance', 65, ARRAY['basement floor sealing','moisture barrier concrete floor','basement concrete care','waterproofing basement floor'], 'Homeowners with finished basements.'),
+
+-- LOCAL SEO / HIRING GUIDES
+('how to hire a concrete contractor', 'local_seo', 92, ARRAY['concrete contractor checklist','questions to ask concrete contractor','vetting contractor guide','concrete contractor red flags'], 'High-intent hiring audience. Include checklist, red flags, what to ask.'),
+('concrete contractor licensing requirements by state', 'local_seo', 80, ARRAY['state contractor license','do concrete contractors need license','concrete license requirements','licensed vs unlicensed contractor'], 'Consumer protection content.'),
+('concrete contractor insurance requirements', 'local_seo', 78, ARRAY['contractor COI requirements','concrete contractor insurance','general liability concrete','workers comp contractor'], 'Homeowners protecting themselves.'),
+('get multiple concrete quotes', 'local_seo', 75, ARRAY['how many contractor quotes','comparing concrete bids','concrete estimate guide','quote comparison tips'], 'Pre-purchase decision-makers.'),
+('concrete project timeline expectations', 'local_seo', 70, ARRAY['how long does concrete take','concrete project schedule','concrete cure time project','when can I use my new driveway'], 'New project planners.'),
+('concrete contractor contract what to include', 'local_seo', 72, ARRAY['contractor agreement concrete','what should be in concrete contract','construction contract tips','concrete project terms'], 'Buyers reviewing contracts.'),
+('how to pay a concrete contractor', 'local_seo', 68, ARRAY['concrete contractor payment schedule','deposit for concrete work','never pay upfront contractor','concrete payment terms'], 'First-time buyers.'),
+('concrete contractor warranty what to expect', 'local_seo', 70, ARRAY['concrete work warranty','how long should concrete last','contractor guarantee concrete','warranty claims concrete'], 'Post-project concerns.'),
+('DIY concrete vs hiring contractor', 'local_seo', 85, ARRAY['can I pour concrete myself','DIY concrete driveway pros cons','when to hire concrete contractor','contractor vs DIY cost'], 'Decision-making audience.'),
+('questions to ask before concrete project', 'local_seo', 75, ARRAY['concrete contractor interview questions','pre-project checklist','concrete bid questions','smart questions contractor'], 'Pre-hire audience.'),
+
+-- SPECIFIC PROJECTS (high-value, long-tail)
+('concrete driveway replacement guide', 'cost_guide', 88, ARRAY['driveway removal cost','new driveway installation steps','driveway demolition cost','complete driveway replacement'], 'Homeowners with end-of-life driveways.'),
+('concrete patio ideas and costs', 'cost_guide', 82, ARRAY['backyard patio designs','concrete patio inspiration','stamped patio ideas','outdoor entertaining space concrete'], 'Pre-purchase inspiration stage.'),
+('concrete walkway installation guide', 'how_to', 72, ARRAY['garden path concrete','curved concrete walkway','concrete pathway cost','stepping stones vs poured path'], 'Landscaping audience.'),
+('concrete garage floor resurfacing', 'maintenance', 75, ARRAY['garage floor makeover','garage concrete repair','floor coat vs resurface','garage floor cost comparison'], 'Garage renovation.'),
+('concrete basketball court cost', 'cost_guide', 65, ARRAY['backyard court installation','sports court concrete','half court basketball cost','outdoor court surface'], 'Sports-oriented homeowners.'),
+('concrete fire pit installation', 'how_to', 62, ARRAY['DIY concrete fire pit','fire pit material comparison','poured concrete fire pit','fire pit cost guide'], 'Outdoor living audience.'),
+('concrete mailbox post installation', 'how_to', 55, ARRAY['mailbox post concrete','setting post in concrete','quick set concrete post','mailbox foundation guide'], 'Simple DIY audience.'),
+('concrete fence post setting guide', 'how_to', 62, ARRAY['fence post concrete mix','how deep to set fence posts','fence post hole concrete','post anchor vs concrete'], 'Fence installation audience.'),
+('concrete landscape edging guide', 'how_to', 60, ARRAY['poured concrete border','concrete curbing landscape','garden edge concrete','landscape concrete cost'], 'Landscaping audience.'),
+('decorative concrete for outdoor living', 'type', 70, ARRAY['outdoor concrete options','decorative concrete techniques','stamped stained colored concrete','outdoor concrete inspiration'], 'Premium outdoor buyers.'),
+
+-- INDUSTRY & TRENDS
+('concrete shortage and price spikes', 'general', 70, ARRAY['concrete supply chain 2025','concrete cost increase','ready mix shortage','building material prices'], 'Current events + cost-conscious buyers.'),
+('sustainable concrete innovations', 'general', 62, ARRAY['green concrete','low carbon concrete','recycled concrete aggregate','fly ash concrete'], 'Eco-conscious audience.'),
+('concrete vs asphalt environmental impact', 'general', 60, ARRAY['carbon footprint concrete','concrete environmental impact','sustainable driveway options','life cycle concrete vs asphalt'], 'Environmentally-aware buyers.'),
+('future of concrete technology', 'general', 55, ARRAY['self healing concrete','graphene concrete','ultra high performance concrete','concrete technology trends'], 'Industry interest.'),
+('concrete industry jobs and career guide', 'general', 50, ARRAY['concrete finisher career','concrete contractor income','trade career concrete','masonry vs concrete career'], 'Career interest.'),
+('concrete vs steel construction comparison', 'general', 58, ARRAY['structural concrete vs steel','framing options comparison','construction materials cost','commercial building materials'], 'Commercial builders.'),
+('history of concrete in construction', 'general', 48, ARRAY['Roman concrete history','modern concrete invention','portland cement history','concrete building evolution'], 'Educational interest.'),
+('winter concrete pouring guide', 'how_to', 75, ARRAY['cold weather concrete pouring','concrete blanket curing','antifreeze admixture concrete','winter concrete precautions'], 'Seasonal contractors and buyers.'),
+('summer concrete pouring challenges', 'how_to', 68, ARRAY['hot weather concrete placement','rapid drying concrete prevention','concrete heat hydration','summer concrete best practices'], 'Seasonal variation.'),
+('concrete mix design for beginners', 'type', 65, ARRAY['basic concrete recipe','Portland cement sand gravel ratio','concrete mix calculator','strength vs workability'], 'New to concrete audience.')
+
+ON CONFLICT (keyword) DO NOTHING;

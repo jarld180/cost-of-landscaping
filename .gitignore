@@ -1,0 +1,58 @@
+
+
+!.env.example
+# .github/ - needed for GitHub Actions workflows
+# Agent tooling
+# Coverage
+# Local env files
+# Logs
+# Misc
+# Node dependencies
+# Nuxt dev/build outputs
+# Playwright
+# Temporary deployment files
+# Vim/editors
+# Windows
+# bv (beads viewer) local config and caches
+*.bak
+*.log
+*.swo
+*.swp
+*:Zone.Identifier
+*~
+.DS_Store
+.agent-mail-project-id
+.agents/
+.beads/
+.bv/
+.cache
+.data
+.env
+.env
+.env.*
+.env.development
+.env.local
+.env.production
+.fleet
+.idea
+.mcp.json
+.nitro
+.nuxt
+.nyc_output/
+.output
+.sisyphus/
+.trees
+/playwright-report/
+/playwright/.auth/
+/test-results/
+Thumbs.db
+_ignore
+coverage/
+desktop.ini
+dist
+logs
+node_modules
+python-worker.tar.gz
+sata_dump.sql
+serve-crawler.py
+shadcn-nuxt-template

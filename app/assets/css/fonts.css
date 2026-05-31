@@ -1,0 +1,34 @@
+/* ObjectSans Font Family */
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/fonts/ObjectSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/fonts/ObjectSans-Slanted.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/fonts/ObjectSans-Heavy.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/fonts/ObjectSans-HeavySlanted.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+

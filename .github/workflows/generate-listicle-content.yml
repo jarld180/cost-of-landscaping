@@ -1,0 +1,44 @@
+name: Generate listicle content (one-shot)
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'Type "yes" to actually write to DB; anything else = dry-run'
+        required: true
+        default: 'no'
+        type: string
+      one_city:
+        description: 'Optional city slug to limit run (e.g. wilmington). Leave blank for all 26.'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  generate:
+    name: Generate per-city listicle + other contractors via Claude on EC2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: SCP + SSH to EC2 and run
+        env:
+          AWS_EC2_HOST: ${{ secrets.AWS_COC_HOST }}
+          AWS_EC2_USER: ${{ secrets.AWS_COC_USER }}
+          AWS_PRIVATE_KEY: ${{ secrets.AWS_COC_PRIVATE_KEY }}
+          COMMIT_FLAG: ${{ github.event.inputs.commit }}
+          ONE_CITY: ${{ github.event.inputs.one_city }}
+        run: |
+          echo "${AWS_PRIVATE_KEY}" > private_key.pem
+          chmod 600 private_key.pem
+
+          scp -o StrictHostKeyChecking=no -i private_key.pem \
+            seeds/generate-listicle-content.mjs \
+            ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/${AWS_EC2_USER}/generate-listicle-content.mjs
+
+          ssh -o StrictHostKeyChecking=no -i private_key.pem \
+            ${AWS_EC2_USER}@${AWS_EC2_HOST} \
+            "COMMIT=${COMMIT_FLAG} ONE_CITY='${ONE_CITY}' node /home/${AWS_EC2_USER}/generate-listicle-content.mjs && rm -f /home/${AWS_EC2_USER}/generate-listicle-content.mjs"
+
+          rm private_key.pem

@@ -1,0 +1,16 @@
+[0;1;32m●[0m docker.socket - Docker Socket for the API
+     Loaded: [0;1;31merror[0m (Reason: Unit docker.socket failed to load properly, please adjust/correct and reload service manager: Device or resource busy)
+     Active: [0;1;32mactive (listening)[0m since Tue 2026-01-27 14:54:19 MST; 2 days ago
+ Invocation: 198b043f56af4441b75f667c2657cb8c
+   Triggers: ● docker.service
+     Listen: /run/docker.sock (Stream)
+      Tasks: 0[0;38;5;245m (limit: 74267)[0m
+     Memory: 0B (peak: 256K)
+        CPU: 586us
+     CGroup: /system.slice/docker.socket
+
+Jan 27 14:54:19 blckbxdev systemd[1]: Starting docker.socket - Docker Socket for the API...
+Jan 27 14:54:19 blckbxdev systemd[1]: Listening on docker.socket - Docker Socket for the API.
+Jan 30 05:13:17 blckbxdev systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.socket: Socket unit configuration has changed while unit has been running, no open socket file descriptor left. The socket unit is not functional until restarted.[0m
+Jan 30 05:13:18 blckbxdev systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.socket: Socket unit configuration has changed while unit has been running, no open socket file descriptor left. The socket unit is not functional until restarted.[0m
+Jan 30 05:13:18 blckbxdev systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.socket: Socket unit configuration has changed while unit has been running, no open socket file descriptor left. The socket unit is not functional until restarted.[0m

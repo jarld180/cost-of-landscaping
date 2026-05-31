@@ -1,0 +1,38 @@
+name: Apply seed-nc-brands.sql (one-shot)
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'Type "yes" to COMMIT; anything else = dry-run (no writes)'
+        required: true
+        default: 'no'
+        type: string
+
+jobs:
+  apply:
+    name: Run seeds/apply-seed.mjs via EC2 (Supabase REST API)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: SCP + SSH to EC2 and run
+        env:
+          AWS_EC2_HOST: ${{ secrets.AWS_COC_HOST }}
+          AWS_EC2_USER: ${{ secrets.AWS_COC_USER }}
+          AWS_PRIVATE_KEY: ${{ secrets.AWS_COC_PRIVATE_KEY }}
+          COMMIT_FLAG: ${{ github.event.inputs.commit }}
+        run: |
+          echo "${AWS_PRIVATE_KEY}" > private_key.pem
+          chmod 600 private_key.pem
+
+          scp -o StrictHostKeyChecking=no -i private_key.pem \
+            seeds/apply-seed.mjs \
+            ${AWS_EC2_USER}@${AWS_EC2_HOST}:/home/${AWS_EC2_USER}/apply-seed.mjs
+
+          ssh -o StrictHostKeyChecking=no -i private_key.pem \
+            ${AWS_EC2_USER}@${AWS_EC2_HOST} \
+            "COMMIT=${COMMIT_FLAG} node /home/${AWS_EC2_USER}/apply-seed.mjs && rm -f /home/${AWS_EC2_USER}/apply-seed.mjs"
+
+          rm private_key.pem

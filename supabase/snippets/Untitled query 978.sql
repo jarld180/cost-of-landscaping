@@ -1,0 +1,1 @@
+SELECT name FROM vault.secrets WHERE name IN ('JOB_RUNNER_API_URL', 'JOB_RUNNER_SECRET');

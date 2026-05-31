@@ -1,0 +1,20 @@
+# SupaControl Configuration
+# https://github.com/haal-laah/supacontrol
+
+[settings]
+# Fail on any guard warning, not just errors
+strict_mode = false
+
+# Require clean git working tree before destructive operations
+require_clean_git = false
+
+# Show migration diff before push
+show_migration_diff = true
+
+[environments.staging]
+# Supabase project reference
+project_ref = "zhmqxclxgwikhrxkvhgm"
+# Git branches that map to this environment
+git_branches = ["develop", "staging"]
+# Operations that require confirmation
+protected_operations = ["reset"]

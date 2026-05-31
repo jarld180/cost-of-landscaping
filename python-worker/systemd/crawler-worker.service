@@ -1,0 +1,27 @@
+[Unit]
+Description=Stealthy Crawler Worker
+After=network.target
+
+[Service]
+Type=simple
+User=crawler
+Group=crawler
+WorkingDirectory=/opt/crawler-worker
+Environment="PATH=/opt/crawler-worker/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="SUPABASE_URL=https://your-project.supabase.co"
+Environment="SUPABASE_SERVICE_ROLE_KEY=your-service-role-key"
+ExecStart=/opt/crawler-worker/.venv/bin/python -m src.main
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/crawler-worker
+
+[Install]
+WantedBy=multi-user.target
