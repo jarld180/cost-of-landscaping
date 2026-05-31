@@ -16,7 +16,7 @@ const backgroundClasses = computed(() => {
   const backgrounds = {
     white: 'bg-neutral-50 dark:bg-neutral-800',
     'light-blue': 'bg-blue-50 dark:bg-blue-900/30',
-    'dark': 'bg-[#00174c] dark:bg-[#00174c]'
+    'dark': 'bg-[#103a21] dark:bg-[#103a21]'
   }
   return backgrounds[props.background]
 })

@@ -2,34 +2,34 @@
 // Homeowner Tips Section
 const tips = [
   {
-    icon: 'heroicons:building-office-2',
-    heading: 'Crack Repairs Prevent Bigger Damage',
-    description: 'Promptly fill cracks with appropriate patch compounds to stop water infiltration that accelerates deterioration. Early repairs extend your driveway\'s lifespan.'
+    icon: 'heroicons:sparkles',
+    heading: 'Fall aeration + overseed is the highest-ROI lawn task',
+    description: 'One $180–$320 fall aeration + overseed visit on a quarter-acre lawn replaces 2–3 years of incremental fertilizer + spot reseeding. Schedule mid-September through mid-October for best germination.'
   },
   {
-    icon: 'heroicons:sparkles',
-    heading: 'Manage Vegetation and Drainage',
-    description: 'Remove weeds from joints and edges, control nearby tree roots, and ensure proper water drainage to prevent damage caused by moisture and root growth.'
+    icon: 'heroicons:scale',
+    heading: 'Get three written quotes — every time',
+    description: 'Landscape pricing varies 30–50% between pros in the same city for the same scope. Three line-item-detailed quotes is the cheapest way to spot outliers and negotiate a fair price.'
   },
   {
     icon: 'heroicons:shield-check',
-    heading: 'Sealing Protects from Weather and Wear',
-    description: 'Spring soil aeration + a balanced fall fertilization round are the two highest-ROI tasks for a healthy lawn. Combined cost: under $400 per year on a quarter-acre yard.'
+    heading: 'Verify both general liability AND workers\' comp',
+    description: 'Landscape work is one of the more hazardous trades. If a crew member is injured on your property and the company lacks workers\' comp, you can be personally sued for medical costs.'
   },
   {
-    icon: 'heroicons:clipboard-document-check',
-    heading: 'Professional Inspections are Beneficial',
-    description: 'Annual inspections by qualified professionals catch early signs of distress, guiding repairs and maintenance to uphold safety and functionality.'
+    icon: 'heroicons:banknotes',
+    heading: 'Never pay more than 30% upfront',
+    description: 'Industry standard residential landscape projects deposit 25–35% to lock the schedule, balance on completion. Pros asking for 50%+ upfront before any work — pass.'
   },
   {
     icon: 'heroicons:sun',
-    heading: 'Seasonal Care Extends Driveway Life',
-    description: 'Adjust maintenance activities seasonally: clear debris in fall, protect from freeze in winter, clean deeply in spring and summer to counter weathering effects effectively.'
+    heading: 'Winterize sprinklers before first freeze',
+    description: 'In freeze-prone climates, skipping the $90–$200 fall blowout typically costs $300–$1,500 in spring valve + backflow repairs. Schedule mid-October to mid-November.'
   },
   {
     icon: 'heroicons:wrench-screwdriver',
-    heading: 'Timely Crack Repairs',
-    description: 'Fix cracks early to prevent water infiltration and expanding damage to the slab.'
+    heading: 'Hardscape base prep beats every other quality signal',
+    description: 'Paver patio failures are almost always base failures, not paver failures. Insist on 4–8" of compacted crushed stone + edge restraint in writing — this is the biggest predictor of a 25+ year install.'
   }
 ]
 </script>
@@ -50,7 +50,7 @@ const tips = [
         <!-- Right Column: Description -->
         <div class="flex items-center">
           <p class="text-lg text-neutral-600 dark:text-neutral-300">
-            Regular Cleaning is Vital. Clear your driveway regularly of dirt, leaves, and grime using a broom or hose. Stubborn stains may need mild detergents or pressure washing to prevent buildup that can degrade the surface over time.
+            Six rules from our research desk that quietly separate a $4,000 mistake from a $4,000 outcome. None of these require special tools or a designer — just a few questions asked at the right time.
           </p>
         </div>
       </div>

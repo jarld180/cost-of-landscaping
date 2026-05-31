@@ -11,35 +11,35 @@ interface Article {
   to: string
 }
 
-// Article data for landscaping guides section
+// Article data for landscaping guides section — the 4 most relevant published blog articles
 const articles: Article[] = [
   {
-    image: '/images/poor-landscaping.webp',
-    eyebrow: 'How To Pick A Contractor',
-    heading: 'What are the signs of poor landscaping installation?',
-    body: 'Signs include uneven surfaces, excessive cracking, spalling (surface chipping), and poor drainage. Hiring experienced contrac...',
-    to: '/signs-of-bad-landscaping-work'
+    image: '/images/driveway.webp',
+    eyebrow: 'Lawn Care',
+    heading: 'How much does lawn care cost in 2026?',
+    body: 'A quarter-acre lawn in 2026 averages $40–$70 per mow, $480–$840 per fertilization season, and $1,800–$3,800 for full annual care. Here is the breakdown by region and lot size.',
+    to: '/blog/how-much-does-lawn-care-cost-in-2026'
   },
   {
-    image: '/images/rebar.webp',
-    eyebrow: 'Before You Hire a Landscaping Contractor',
-    heading: 'Do I need rebar in my landscaping?',
-    body: 'This is a secondary page preview. As evident, content is displayed on this type of page.',
-    to: '/do-i-need-rebar-in-landscaping'
+    image: '/images/patio.webp',
+    eyebrow: 'Landscape Design',
+    heading: 'Landscape design cost in 2026 — design fees + install',
+    body: 'Design-only fees run $50–$200/hr or 10–20% of install. Full design-build for a quarter-acre yard lands $30,000–$100,000+. Here is what your design budget actually buys.',
+    to: '/blog/landscape-design-cost-in-2026'
   },
   {
-    image: '/images/patio-thickness.webp',
-    eyebrow: 'Landscaping Installation Tips',
-    heading: 'How thick should a landscaping patio be?',
-    body: 'Standard landscaping patios should be at least 4 inches thick. For areas with heavy use or freeze-thaw cycles, consider 5-6 inches...',
-    to: '/landscaping-patio-thickness-4-inch-vs-6-inch-guide'
+    image: '/images/foundation.webp',
+    eyebrow: 'Hardscaping',
+    heading: 'Hardscape cost per square foot in 2026',
+    body: 'Pavers $15–$30/sf installed. Natural stone $35–$70/sf. Stamped concrete $14–$26/sf. Wood deck $30–$55/sf. Retaining walls $25–$60 per face foot.',
+    to: '/blog/hardscape-cost-per-square-foot-2026'
   },
   {
-    image: '/images/dry-pour.webp',
-    eyebrow: 'How To Pick A Contractor',
-    heading: 'Does Dry Pouring Landscaping Hold Up',
-    body: 'DIY installation is possible but requires the right tools, knowledge, and preparation. Landscaping patios need proper site grading,...',
-    to: '/dry-pour-landscaping-when-it-works-and-when-it-fails'
+    image: '/images/sidewalks.webp',
+    eyebrow: 'Irrigation',
+    heading: 'Sprinkler system cost in 2026 — install, zones, smart controllers',
+    body: 'Residential sprinkler installs run $1,800–$4,200 per zone in 2026. A typical quarter-acre needs 4–7 zones — $3,000–$8,000 total. Smart controllers add $250–$650.',
+    to: '/blog/sprinkler-system-cost-2026'
   },
 ]
 </script>
@@ -65,7 +65,7 @@ const articles: Article[] = [
 
         <!-- See All Button -->
         <div class="flex justify-start">
-          <NuxtLink to="/">
+          <NuxtLink to="/blog">
             <Button
               text="See All"
               variant="primary-outline"

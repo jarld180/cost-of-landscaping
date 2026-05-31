@@ -16,14 +16,14 @@ const contractors: Contractor[] = [
   {
     name: 'Greenfield Landscape Co.',
     location: 'Houston, TX',
-    services: 'Driveway, Foundation, Patios',
+    services: 'Design, Hardscape, Lawn Care',
     logo: 'https://placeholdit.com/600x400',
     topRated: true
   },
   {
-    name: 'PrimePour Contractors',
+    name: 'Cascade Outdoor Living',
     location: 'Phoenix, AZ',
-    services: 'Design, Hardscape, Lawn Care',
+    services: 'Irrigation, Hardscape, Tree Service',
     logo: 'https://placeholdit.com/600x400',
     topRated: true
   }
@@ -31,7 +31,7 @@ const contractors: Contractor[] = [
 </script>
 
 <template>
-  <section class="rounded-3xl py-20 md:py-24 lg:py-28" style="background-color: #00174c;">
+  <section class="rounded-3xl py-20 md:py-24 lg:py-28" style="background-color: #103a21;">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Eyebrow -->
       <div class="mb-6">
@@ -85,7 +85,7 @@ const contractors: Contractor[] = [
           v-for="contractor in contractors"
           :key="contractor.name"
           class="flex gap-6 rounded-lg border p-8"
-          style="background-color: #0f2557; border-color: #263a67; border-width: 1px;"
+          style="background-color: #144627; border-color: #1f6f3a; border-width: 1px;"
         >
           <!-- Logo (Left Side) -->
           <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white">

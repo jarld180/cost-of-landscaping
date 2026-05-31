@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Footer component for the application
 // Features logo, quick links, social icons, and copyright section
-// Background: #00174c (dark navy blue)
+// Background: #103a21 (dark navy blue)
 
 // Fetch footer menu dynamically (gets first enabled footer menu)
 const { fetchMenuByLocation } = useMenus()
@@ -57,7 +57,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="w-full" style="background-color: #00174c;">
+  <footer class="w-full" style="background-color: #103a21;">
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <!-- Top Section: Logo on left, Quick Links + Social on right -->
       <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
