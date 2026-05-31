@@ -79,7 +79,7 @@ const siteName = config.public.siteName || 'Cost of Landscaping'
 // Build SEO data
 const year = new Date().getFullYear()
 const pageTitle = `Best Landscapers in ${stateData.value.name} (${year})`
-const pageDescription = `Find top-rated landscapers in ${stateData.value.name}. Compare ratings, services, and get free quotes from verified, insured professionals for driveways, patios, foundations, and more.`
+const pageDescription = `Find top-rated landscapers in ${stateData.value.name}. Compare ratings, services, and get free quotes from verified, insured pros for lawn care, landscape design, hardscaping, irrigation, and tree service.`
 const canonicalUrl = `${siteUrl}/${stateData.value.slug}/`
 
 // Schema.org BreadcrumbList

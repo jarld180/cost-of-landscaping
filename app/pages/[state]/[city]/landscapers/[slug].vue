@@ -193,7 +193,7 @@ async function submitContact() {
 const services = computed(() => {
   const cats = categories.value
   if (cats.length === 0) {
-    return [{ title: 'landscaping Services', description: 'Professional landscaping installation and repair.', badge: 'Popular', badgeVariant: 'blue-blue' as const }]
+    return [{ title: 'Landscape Services', description: 'Lawn care, landscape design, hardscaping, irrigation, and tree service.', badge: 'Popular', badgeVariant: 'blue-blue' as const }]
   }
   return cats.slice(0, 4).map((cat: string, index: number) => ({
     title: cat,

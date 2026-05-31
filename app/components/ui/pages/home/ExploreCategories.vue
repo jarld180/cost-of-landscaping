@@ -23,37 +23,37 @@ const categories: Category[] = [
   {
     title: 'Lawn Care',
     description: 'Weekly mowing, seasonal fertilization programs, aeration + overseeding — what it actually costs to keep a healthy lawn in 2026 and the verified pros doing it.',
-    image: '/images/driveway.webp',
+    image: '/images/lawn-care.webp',
     slug: 'lawn-care'
   },
   {
     title: 'Landscape Design',
     description: 'Design-only fees, design-build pricing, front-yard refreshes, full-property installs. What a real residential landscape design budget looks like and where the money actually goes.',
-    image: '/images/patio.webp',
+    image: '/images/landscape-design.webp',
     slug: 'landscape-design'
   },
   {
     title: 'Hardscaping',
     description: 'Paver patios, natural stone walkways, retaining walls, fire pits, outdoor kitchens. Per-square-foot pricing for every common hardscape material in 2026.',
-    image: '/images/foundation.webp',
+    image: '/images/hardscaping.webp',
     slug: 'hardscaping'
   },
   {
     title: 'Irrigation',
     description: 'Sprinkler installs by zone, drip systems for beds, smart Wi-Fi controllers, backflow + winterization — all-in residential pricing.',
-    image: '/images/sidewalks.webp',
+    image: '/images/irrigation.webp',
     slug: 'irrigation'
   },
   {
     title: 'Tree Service',
     description: 'Removal by tree size, stump grinding, emergency response. ISA-certified arborists vs. chainsaw operators, and how to tell the difference before you sign.',
-    image: '/images/stamped.webp',
+    image: '/images/tree-service.webp',
     slug: 'tree-service'
   },
   {
     title: 'Mulch & Planting',
     description: 'Mulch cost per yard installed, plant material markups, sod vs. seed pricing, tree + shrub installation. Recurring and one-time costs.',
-    image: '/images/repair.webp',
+    image: '/images/mulch-planting.webp',
     slug: 'mulch-planting'
   }
 ]

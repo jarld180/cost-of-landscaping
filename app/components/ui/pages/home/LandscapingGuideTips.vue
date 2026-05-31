@@ -14,28 +14,28 @@ interface Article {
 // Article data for landscaping guides section — the 4 most relevant published blog articles
 const articles: Article[] = [
   {
-    image: '/images/driveway.webp',
+    image: '/images/lawn-care.webp',
     eyebrow: 'Lawn Care',
     heading: 'How much does lawn care cost in 2026?',
     body: 'A quarter-acre lawn in 2026 averages $40–$70 per mow, $480–$840 per fertilization season, and $1,800–$3,800 for full annual care. Here is the breakdown by region and lot size.',
     to: '/blog/how-much-does-lawn-care-cost-in-2026'
   },
   {
-    image: '/images/patio.webp',
+    image: '/images/landscape-design.webp',
     eyebrow: 'Landscape Design',
     heading: 'Landscape design cost in 2026 — design fees + install',
     body: 'Design-only fees run $50–$200/hr or 10–20% of install. Full design-build for a quarter-acre yard lands $30,000–$100,000+. Here is what your design budget actually buys.',
     to: '/blog/landscape-design-cost-in-2026'
   },
   {
-    image: '/images/foundation.webp',
+    image: '/images/hardscaping.webp',
     eyebrow: 'Hardscaping',
     heading: 'Hardscape cost per square foot in 2026',
     body: 'Pavers $15–$30/sf installed. Natural stone $35–$70/sf. Stamped concrete $14–$26/sf. Wood deck $30–$55/sf. Retaining walls $25–$60 per face foot.',
     to: '/blog/hardscape-cost-per-square-foot-2026'
   },
   {
-    image: '/images/sidewalks.webp',
+    image: '/images/irrigation.webp',
     eyebrow: 'Irrigation',
     heading: 'Sprinkler system cost in 2026 — install, zones, smart controllers',
     body: 'Residential sprinkler installs run $1,800–$4,200 per zone in 2026. A typical quarter-acre needs 4–7 zones — $3,000–$8,000 total. Smart controllers add $250–$650.',

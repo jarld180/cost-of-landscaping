@@ -1,40 +1,40 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'default' })
 useSeoMeta({
-  title: 'Careers — Local Landscaper',
-  description: 'Join the Local Landscaper team. Browse open positions and apply to work with the best landscaping crews in North Carolina.',
+  title: 'Careers — Cost of Landscaping',
+  description: 'Cost of Landscaping is an independent research desk for residential landscape pricing. We hire writers, researchers, and data analysts who care about getting the numbers right.',
   robots: 'index, follow'
 })
 
 const jobs = [
   {
-    title: 'landscaping Crew Member',
-    type: 'Full-time',
-    location: 'Charlotte, NC',
-    description: 'Hands-on landscape work — pouring, finishing, and forming driveways, patios, and foundations. No prior experience required; we train the right people.',
-    requirements: ['Valid driver\'s license', 'Ability to lift 50 lbs', 'Reliable transportation', 'Team player'],
+    title: 'Research Writer — Landscape Pricing',
+    type: 'Contract (remote)',
+    location: 'Remote, US',
+    description: 'Write 2,500–3,500 word evergreen cost guides on lawn care, landscape design, hardscaping, irrigation, and tree service. You will be writing for homeowners about to spend $3k–$80k and want them to walk away with a real budget — not a generic estimate.',
+    requirements: ['Portfolio of long-form home-services or trade pricing content', 'Comfort interviewing contractors and pulling regional pricing data', 'Plain, direct writing — no SEO filler'],
   },
   {
-    title: 'landscaping Finisher',
-    type: 'Full-time',
-    location: 'Charlotte, NC',
-    description: 'Responsible for surface finishing on residential and commercial landscape projects. Broom, trowel, and stamped work.',
-    requirements: ['2+ years landscaping finishing experience', 'Stamped landscaping knowledge a plus', 'Attention to detail'],
+    title: 'Data Analyst — Contractor Directory',
+    type: 'Contract (remote)',
+    location: 'Remote, US',
+    description: 'Maintain and enrich the 36k+ landscape pro directory. Deduplication, licensing/insurance verification workflows, geocoding cleanup, ranking signal QA across all 50 states.',
+    requirements: ['SQL + Python (pandas) comfort', 'Experience with US business data (license boards, BBB, Google Places)', 'Detail-obsessed — small errors compound at our scale'],
   },
   {
-    title: 'Foreman / Lead',
-    type: 'Full-time',
-    location: 'Charlotte, NC',
-    description: 'Lead a crew of 3–5 on residential projects from prep through pour. Coordinate with homeowners and handle daily site management.',
-    requirements: ['3+ years in landscaping', 'Experience managing a crew', 'Strong communication skills', 'Valid driver\'s license'],
+    title: 'Editor — Cost Guides',
+    type: 'Part-time',
+    location: 'Remote, US',
+    description: 'Review and approve every cost guide and city listicle before publish. Hold the line on accuracy, schema correctness, internal linking, and our independent-research-desk voice.',
+    requirements: ['5+ years editing trade, home-services, or pricing content', 'Strong SEO + schema instincts', 'Comfortable rejecting and rewriting drafts that miss the bar'],
   },
 ]
 
 const perks = [
-  { icon: 'heroicons:currency-dollar', label: 'Competitive pay', detail: 'Weekly pay, performance bonuses' },
-  { icon: 'heroicons:calendar-days', label: 'Steady work', detail: 'Year-round projects — no slow season' },
-  { icon: 'heroicons:user-group', label: 'Small team', detail: 'Tight-knit crews, not a big corporation' },
-  { icon: 'heroicons:arrow-trending-up', label: 'Growth', detail: 'Foreman and management tracks available' },
+  { icon: 'heroicons:globe-alt', label: 'Fully remote', detail: 'Async-first, US time zones' },
+  { icon: 'heroicons:currency-dollar', label: 'Paid by the piece', detail: 'Per-guide or per-city rates; no salary games' },
+  { icon: 'heroicons:user-group', label: 'Tiny team', detail: 'You will talk to the founder, not a layer of managers' },
+  { icon: 'heroicons:arrow-trending-up', label: 'Real bylines', detail: 'Your name on the research, not ghostwritten' },
 ]
 </script>
 
@@ -46,10 +46,10 @@ const perks = [
         <div class="mx-auto max-w-3xl text-center">
           <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">We're hiring</p>
           <h1 class="font-heading mb-4 text-4xl font-bold leading-tight text-neutral-900 dark:text-white md:text-5xl">
-            Build Something That Lasts
+            Help us get residential landscape pricing right
           </h1>
           <p class="text-lg text-neutral-700 dark:text-neutral-300">
-            Join a landscaping crew that takes craftsmanship seriously. We're looking for hard workers who want steady pay and room to grow.
+            Cost of Landscaping is an independent research desk — no paid placements, no "request a quote" funnels disguised as content. If that sounds like the kind of work you want your byline on, read on.
           </p>
           <a
             href="#open-positions"
@@ -63,7 +63,7 @@ const perks = [
 
     <!-- Perks -->
     <div class="container mx-auto px-4 py-12">
-      <h2 class="font-heading mb-8 text-center text-2xl font-bold text-neutral-900 dark:text-white">Why Work With Us</h2>
+      <h2 class="font-heading mb-8 text-center text-2xl font-bold text-neutral-900 dark:text-white">How we work</h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div
           v-for="perk in perks"
@@ -101,7 +101,7 @@ const perks = [
               </div>
             </div>
             <a
-              href="mailto:careers@locallandscapingcontractor.com"
+              href="mailto:careers@costoflandscaping.com"
               class="shrink-0 rounded-lg border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-neutral-900"
             >
               Apply Now
@@ -126,15 +126,15 @@ const perks = [
       <div class="container mx-auto px-4 text-center">
         <h2 class="font-heading mb-3 text-2xl font-bold text-neutral-900 dark:text-white">Ready to Apply?</h2>
         <p class="mb-6 text-neutral-600 dark:text-neutral-300">
-          Send your name, position of interest, and a little about yourself to:
+          Send your name, the role you want, and 2–3 published samples (or a portfolio URL) to:
         </p>
         <a
-          href="mailto:careers@locallandscapingcontractor.com"
+          href="mailto:careers@costoflandscaping.com"
           class="inline-block rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition hover:bg-blue-700"
         >
-          careers@locallandscapingcontractor.com
+          careers@costoflandscaping.com
         </a>
-        <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">We typically respond within 1–2 business days.</p>
+        <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">We typically respond within 3–5 business days.</p>
       </div>
     </div>
   </div>

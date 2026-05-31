@@ -60,9 +60,9 @@ const faqItems = [
     question: "How do I find a landscaper near me?", 
     answer: "Use our search tool above to enter your city, state, or ZIP code. We'll show you local landscape pros in your area with reviews and ratings to help you make an informed decision." 
   },
-  { 
-    question: "What services do landscape pros offer?", 
-    answer: "landscaping contractors offer a wide range of services including driveway installation, patio construction, foundation work, walkways, stamped and decorative landscaping, and landscaping repair services." 
+  {
+    question: "What services do landscape pros offer?",
+    answer: "Landscape pros cover weekly mowing and seasonal maintenance, lawn care programs (aeration, overseeding, fertilization), full landscape design and design-build, hardscaping (paver patios, walkways, retaining walls, fire pits), irrigation install and repair, sod and planting installs, mulch refreshes, and tree service (trimming, removal, stump grinding)."
   },
   { 
     question: "How do I get a quote for my landscape project?", 
@@ -76,9 +76,9 @@ const faqItems = [
     question: "What should I look for when hiring a landscaper?", 
     answer: "Look for contractors with positive reviews, proper licensing and insurance, clear communication, detailed written estimates, and examples of previous work similar to your project." 
   },
-  { 
-    question: "How much does landscape work typically cost?", 
-    answer: "Costs vary widely based on project type, size, and location. Driveways typically range from $4-15 per square foot, patios $6-20 per square foot, and decorative landscaping can be $15-25+ per square foot." 
+  {
+    question: "How much does landscape work typically cost?",
+    answer: "Costs vary widely by service. Weekly mowing on a quarter-acre runs $40–$70 per visit. Full-season lawn care programs run $1,800–$3,800. Paver patios $15–$30 per square foot installed. Sprinkler system installs $1,800–$4,200 per zone. Landscape design fees run $50–$200/hr or 10–20% of install. See our city pages for local pricing and our blog for full cost breakdowns."
   },
   { 
     question: "Do contractors offer free estimates?", 

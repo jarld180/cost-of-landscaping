@@ -8,7 +8,7 @@
         Find Landscape Pros Near You
       </h1>
       <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
-        Connect with top-rated landscape professionals in your area. Get quotes for driveways, patios, foundations, and more.
+        Connect with top-rated landscape pros in your area. Get quotes for lawn care, landscape design, hardscaping, irrigation, and tree service.
       </p>
       <div class="mx-auto max-w-xl">
         <SearchInput

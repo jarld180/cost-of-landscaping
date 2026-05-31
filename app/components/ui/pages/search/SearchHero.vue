@@ -50,11 +50,12 @@ const props = withDefaults(defineProps<Props>(), {
   backgroundColor: '#E8EBF3',
   serviceOptions: () => [
     { id: null, name: 'All Services', slug: null },
-    { id: 1, name: 'Driveways', slug: 'driveways' },
-    { id: 2, name: 'Patios', slug: 'patios' },
-    { id: 3, name: 'Foundations', slug: 'foundations' },
-    { id: 4, name: 'Walkways', slug: 'walkways' },
-    { id: 5, name: 'Stamped & Decorative', slug: 'stamped-decorative' }
+    { id: 1, name: 'Lawn Care', slug: 'lawn-care' },
+    { id: 2, name: 'Landscape Design', slug: 'landscape-design' },
+    { id: 3, name: 'Hardscaping', slug: 'hardscaping' },
+    { id: 4, name: 'Irrigation', slug: 'irrigation' },
+    { id: 5, name: 'Tree Service', slug: 'tree-service' },
+    { id: 6, name: 'Mulch & Planting', slug: 'mulch-planting' }
   ],
   serviceTypeFilterOptions: () => [
     { value: 'all', label: 'Service Type' }
@@ -90,7 +91,7 @@ const headingText = computed(() => {
 const subheadlineText = computed(() => {
   return isStateSearch.value
     ? `Discover top-rated landscape professionals across ${props.stateName}. Compare services, read reviews, and get quotes from verified contractors in your area.`
-    : 'Explore verified pros for driveways, patios, foundations, and decorative landscape. Compare services, reviews, and pricing—then contact your top choices with confidence.'
+    : 'Explore verified pros for lawn care, landscape design, hardscaping, irrigation, and tree service. Compare services, reviews, and pricing — then contact your top choices with confidence.'
 })
 
 // Emits

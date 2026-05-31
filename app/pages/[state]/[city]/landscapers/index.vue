@@ -98,12 +98,12 @@ const totalPages = computed(() => Math.ceil((contractorsData.value?.total || 0) 
 const hasMore = computed(() => contractorsData.value?.hasMore || false)
 
 const landscapingGuides = [
-  { title: 'How Much Does landscaping Cost Per Square Foot?', href: '/how-much-does-landscaping-cost-per-square-foot' },
-  { title: 'landscaping Driveway Cost Guide', href: '/lawn-care' },
-  { title: 'landscaping Patio Cost & Ideas', href: '/landscape-design' },
-  { title: 'Hardscaping Repair Cost Guide', href: '/hardscaping' },
-  { title: 'Foundation landscaping Cost', href: '/irrigation' },
-  { title: 'How to Hire a Landscaper', href: '/how-to-hire-a-landscaping-contractor' },
+  { title: 'Lawn Care Cost in 2026', href: '/blog/how-much-does-lawn-care-cost-in-2026' },
+  { title: 'Landscape Design Cost in 2026', href: '/blog/landscape-design-cost-in-2026' },
+  { title: 'Hardscape Cost Per Square Foot', href: '/blog/hardscape-cost-per-square-foot-2026' },
+  { title: 'Sprinkler System Cost in 2026', href: '/blog/sprinkler-system-cost-2026' },
+  { title: 'Tree Removal Cost Guide', href: '/blog/tree-removal-cost-2026' },
+  { title: 'See All Articles', href: '/blog' },
 ]
 </script>
 
@@ -220,7 +220,7 @@ const landscapingGuides = [
 
       <!-- Internal links: landscaping cost guides -->
       <div class="mt-12 border-t border-neutral-200 pt-8 dark:border-neutral-700">
-        <h2 class="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">landscaping Cost Guides</h2>
+        <h2 class="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">Landscape Cost Guides</h2>
         <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <NuxtLink
             v-for="guide in landscapingGuides"

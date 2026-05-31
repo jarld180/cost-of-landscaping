@@ -14,40 +14,40 @@ interface ServiceCategory {
 // Service categories matching existing filter options
 const services: ServiceCategory[] = [
   {
-    name: 'Driveways',
-    slug: 'landscape-driveways',
-    description: 'Installation, repair, and resurfacing for residential and commercial driveways',
-    icon: 'heroicons:truck'
-  },
-  {
-    name: 'Patios',
-    slug: 'landscape-patios',
-    description: 'Custom outdoor living spaces with decorative finishes and durable construction',
+    name: 'Lawn Care',
+    slug: 'lawn-care',
+    description: 'Weekly mowing, fertilization programs, aeration + overseeding, and full-season maintenance',
     icon: 'heroicons:sun'
   },
   {
-    name: 'Foundations',
-    slug: 'landscape-foundations',
-    description: 'Structural landscape work including slabs, footings, and foundation repair',
-    icon: 'heroicons:home-modern'
+    name: 'Landscape Design',
+    slug: 'landscape-design',
+    description: 'Design-only fees, design-build pricing, front-yard refreshes and full-property installs',
+    icon: 'heroicons:pencil-square'
   },
   {
-    name: 'Walkways',
-    slug: 'sidewalks-walkways',
-    description: 'Sidewalks, garden paths, and front entry walkways built to last',
-    icon: 'heroicons:arrow-long-right'
+    name: 'Hardscaping',
+    slug: 'hardscaping',
+    description: 'Paver patios, natural stone walkways, retaining walls, fire pits and outdoor kitchens',
+    icon: 'heroicons:rectangle-stack'
   },
   {
-    name: 'Stamped & Decorative',
-    slug: 'stamped-decorative',
-    description: 'Colored, stamped, and textured landscape for unique aesthetic appeal',
+    name: 'Irrigation',
+    slug: 'irrigation',
+    description: 'Sprinkler installs by zone, drip systems, smart Wi-Fi controllers and winterization',
+    icon: 'heroicons:cloud'
+  },
+  {
+    name: 'Tree Service',
+    slug: 'tree-service',
+    description: 'Trimming, removal, stump grinding, and ISA-certified arborist services',
     icon: 'heroicons:sparkles'
   },
   {
-    name: 'landscape Repair',
-    slug: 'landscape-repair',
-    description: 'Crack repair, slab lifting, and surface restoration services',
-    icon: 'heroicons:wrench-screwdriver'
+    name: 'Mulch & Planting',
+    slug: 'mulch-planting',
+    description: 'Mulch refresh by yard, plant material and markups, sod vs. seed pricing, tree and shrub installs',
+    icon: 'heroicons:cube'
   }
 ]
 </script>
@@ -64,7 +64,7 @@ const services: ServiceCategory[] = [
           class="mb-4"
         />
         <h2 class="font-heading text-3xl font-bold text-neutral-900 dark:text-neutral-50 md:text-4xl">
-          Popular landscape Services
+          Popular Landscape Services
         </h2>
         <p class="mt-3 text-lg text-neutral-600 dark:text-neutral-400">
           Find contractors specialized in your specific project type
