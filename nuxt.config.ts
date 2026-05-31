@@ -140,6 +140,15 @@ export default defineNuxtConfig({
   site: {
     url: 'https://costoflandscaping.com',
     name: 'Cost of Landscaping',
+    description: 'Independent research desk for U.S. landscaping costs — lawn care, design, hardscaping, irrigation, tree service. 36,000+ verified pros in 50 states.',
+    defaultLocale: 'en',
+  },
+
+  ogImage: {
+    defaults: {
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 30,
+    },
+    componentDirs: ['OgImage', 'OgImageTemplate'],
   },
 
   runtimeConfig: {

@@ -24,8 +24,8 @@
 
         <!-- Description -->
         <p class="mb-10 max-w-3xl text-base text-neutral-600 dark:text-neutral-300 sm:text-lg md:text-xl">
-          Get accurate cost estimates, expert tips, and verified local pros for your next driveway,
-          patio, or walkway upgrade. Start your project smarter, today.
+          Real cost data + a national directory of verified lawn-care pros, landscape designers,
+          hardscapers, irrigation installers, and tree-service crews. No paid placements.
         </p>
 
         <!-- Search Input with Button -->
@@ -34,7 +34,7 @@
             placeholder="Type a city, state or zip code.."
             variant="primary-outline"
             size="lg"
-            button="Find Contractors"
+            button="Find Landscapers"
           />
         </div>
       </div>

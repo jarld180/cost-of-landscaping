@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_9B8Gmoo0VRXUSECsBcAmspE9ESVF",
+  "orgId": "team_ZYv2Nv0ctC5gzxm2pALrGCqT",
+  "projectName": "cost-of-landscaping",
+  "settings": {
+    "createdAt": 1780197990119,
+    "framework": "nuxtjs",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}
